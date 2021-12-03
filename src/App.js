@@ -6,8 +6,19 @@ const App = () => {
 
   const [tasksToDoList, setTasksToDoList] = useState()
 
-  // Add task
-
+  // Add task function. We expect some information that needs to be passed inside.
+  // Information is going to be uplifted from child to parent and then from parent to another child.
+  const addTaskHandler = (item) => {
+    setTasksToDoList((prevTasksList) => {
+      return [
+        ...prevTasksList,                 // Making sure the previous data inside of tasksToDoList does not get deleted
+        {
+          id: Math.random().toString(),   // Getting custom id, to distinguish items between when looping through the array.
+          tasks: item
+        }
+      ]
+    })
+  }
 
   // Remove task
 
@@ -24,7 +35,7 @@ const App = () => {
 
       {/* AddTask component */}
 
-      <AddTask />
+      <AddTask onAddTask={addTaskHandler} />
 
       {/* TaskList component displayed */}
 
