@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -6,9 +8,41 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  font-family: 'Special Elite', cursive;
+  margin-top: 3rem;
 }
 
 .app {
   display: flex;
   flex-direction: column;
+  width: 500px;
+
+  p {
+    font-size: 1.3rem;
+    word-wrap: break-word;
+    width: 80%;
+    opacity: .7;
+  }
+
+}
+
+
+// ! Headings
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+  width: 300px;
+}
+
+h1 {
+  font-family: 'Special Elite', cursive;
+  line-height: 0;
+  font-size: 3rem;
+}
+
+h3 {
+  line-height: 0;
+  margin-top: -.3rem;
 }

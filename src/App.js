@@ -46,9 +46,13 @@ const App = () => {
     <div className='app'>
       {/* Headings */}
 
-      <div>
+      <div className='headings'>
         <h1>TO-DO list</h1>
+        <h3>&#47; <span>təˈduː lɪst</span> &#47; sentence</h3>
       </div>
+      <p>
+        Your future is created what you do today not tomorrow
+      </p>
 
       {/* AddTask component */}
 
