@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import TasksList from './components/Tasks/TasksList'
+import AddTask from './components/Tasks/AddTask'
 
 const App = () => {
 
@@ -13,14 +15,21 @@ const App = () => {
   // Localstorage
 
   return (
-    <div>
+    <div className='app'>
       {/* Headings */}
 
+      <div>
+        <h1>TO-DO list</h1>
+      </div>
 
       {/* AddTask component */}
 
+      <AddTask />
 
       {/* TaskList component displayed */}
+
+      <TasksList />
+
     </div>
   )
 }
