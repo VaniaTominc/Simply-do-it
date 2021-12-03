@@ -29,7 +29,7 @@ const AddTask = (props) => {
 
       <div>
         <form onSubmit={addTaskHandler}>
-          <label></label>
+          <label htmlFor='task' className='task-label'>Task</label>
           <input 
             id='id'
             type='text'

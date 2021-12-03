@@ -16,9 +16,12 @@ const TasksList = (props) => {
             // console.log('id >>>>', id)
 
             return (
-              <div key={item.id}>
-                <div>
-                  <div>
+              <div 
+                key={item.id}
+                className='task-card'
+              >
+                <div className='card-content'>
+                  <div className='content task-content'>
                     {item.task}
                   </div>
                   <button onClick={() => props.delete(id)}>Delete</button>

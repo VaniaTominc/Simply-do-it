@@ -39,4 +39,33 @@ h1 {
 h3 {
   line-height: 0;
   margin-top: -0.3rem;
+}
+
+.task-card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.task-label {
+  display: none;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  padding: 1rem;
+  border: none;
+}
+
+.task-content {
+  word-wrap: break-word;
+  width: 80%;
 }/*# sourceMappingURL=main.css.map */
