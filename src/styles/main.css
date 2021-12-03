@@ -68,4 +68,47 @@ h3 {
 .task-content {
   word-wrap: break-word;
   width: 80%;
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  flex-grow: 1;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+input:focus {
+  outline: none !important;
+  font-family: "Special Elite", cursive;
+}
+
+.add-btn {
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-family: "Special Elite", cursive;
+}
+
+.input-border {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
 }/*# sourceMappingURL=main.css.map */
