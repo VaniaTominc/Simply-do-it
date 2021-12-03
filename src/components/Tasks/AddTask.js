@@ -1,20 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const AddTask = (props) => {
 
+  // Receiving function from a parent, whatever we get is then passed as an argument to the function in parent component
+  // console.log('[ADDTASK COMPONENT] >>>>', props)
   
+  const [enteredTask, setEnteredTask] = useState('')
+
+  const addTaskHandler = event => {
+    event.preventDefault()
+    props.onAddTask(enteredTask)
+    setEnteredTask('')
+  }
 
   return (
     <div>
       {/* ADDTASK INPUT TO BE DISPLAYED */}
 
       <div>
-        <form>
+        <form onSubmit={addTaskHandler}>
           <label></label>
           <input 
             id='id'
             type='text'
-            value
+            value={enteredTask}
             onChange
             maxLength='100'
             placeholder='Today I am working on ...'
