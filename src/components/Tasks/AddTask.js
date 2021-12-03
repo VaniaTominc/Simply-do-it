@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BsPlusCircleFill } from 'react-icons/bs'
+import Error from '../UI/Error'
 
 const AddTask = (props) => {
 
@@ -7,10 +8,18 @@ const AddTask = (props) => {
   // console.log('[ADDTASK COMPONENT] >>>>', props)
   
   const [enteredTask, setEnteredTask] = useState('')
+  const [error, setError] = useState()
 
   // ! Handling on submit task
   const addTaskHandler = event => {
     event.preventDefault()
+    if (enteredTask.trim().length === 0) {
+      setError({
+        title: 'Invalid input',
+        message: 'Please enter a valid text (non-empty values).',
+      })
+      return
+    }
     props.onAddTask(enteredTask)
     setEnteredTask('')
   }
@@ -22,10 +31,24 @@ const AddTask = (props) => {
     // console.log('enteredTask >>>>', enteredTask)
   }
 
-  
+  // ! Error handler
+  const errorHandler = () => {
+    setError(null)
+  }
 
   return (
     <div>
+
+      {/* ERROR MESSAGE DISPLAYED */}
+
+      {error && (
+        <Error
+          title={error.title}
+          message={error.message}
+          onConfirm={errorHandler}
+        />
+      )}
+
       {/* ADDTASK INPUT TO BE DISPLAYED */}
 
       <div className='input-border'>
@@ -44,7 +67,7 @@ const AddTask = (props) => {
               type='submit'
               className='add-btn'
             >
-              <BsPlusCircleFill size={24} />
+              <BsPlusCircleFill size={24} className='add-icon'/>
             </button>
           </div>
         </form>
