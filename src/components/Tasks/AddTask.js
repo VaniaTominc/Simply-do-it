@@ -28,22 +28,25 @@ const AddTask = (props) => {
     <div>
       {/* ADDTASK INPUT TO BE DISPLAYED */}
 
-      <div>
+      <div className='input-border'>
         <form onSubmit={addTaskHandler}>
-          <label htmlFor='task' className='task-label'>Task</label>
-          <input 
-            id='id'
-            type='text'
-            value={enteredTask}
-            onChange={taskChangeHandler}
-            maxLength='100'
-            placeholder='Today I am working on ...'
-          />
-          <button 
-            type='submit'
-          >
-            <BsPlusCircleFill size={24} />
-          </button>
+          <div className='card-content'>
+            <label htmlFor='task' className='task-label'>Task</label>
+            <input 
+              id='id'
+              type='text'
+              value={enteredTask}
+              onChange={taskChangeHandler}
+              maxLength='100'
+              placeholder='Today I am working on ...'
+            />
+            <button 
+              type='submit'
+              className='add-btn'
+            >
+              <BsPlusCircleFill size={24} />
+            </button>
+          </div>
         </form>
       </div>
     </div>
