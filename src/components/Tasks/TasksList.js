@@ -21,7 +21,7 @@ const TasksList = (props) => {
                   <div>
                     {item.task}
                   </div>
-                  <button>Delete</button>
+                  <button onClick={() => props.delete(id)}>Delete</button>
                 </div>
               </div>
             )

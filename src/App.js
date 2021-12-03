@@ -6,7 +6,8 @@ const App = () => {
 
   const [tasksToDoList, setTasksToDoList] = useState([])
 
-  // Add task function. We expect some information that needs to be passed inside.
+  // ! Add task function. 
+  // We expect some information that needs to be passed inside.
   // Information is going to be uplifted from child to parent and then from parent to another child.
   const addTaskHandler = (item) => {
     setTasksToDoList((prevTasksList) => {
@@ -20,10 +21,19 @@ const App = () => {
     })
   }
 
-  // Remove task
+  // ! ---- Remove task
+  // Function is going to be passed to the child and child will return id
+
+  const removeTask = id => {
+    const remove = tasksToDoList.filter(item => item.id !== id)
+    // Making sure that tasksToDoList is then updated
+    setTasksToDoList(remove)
+  }
+
+  // ! ---- Localstorage
 
 
-  // Localstorage
+  // !
 
   return (
     <div className='app'>
@@ -39,7 +49,7 @@ const App = () => {
 
       {/* TaskList component displayed */}
 
-      <TasksList tasks={tasksToDoList} />
+      <TasksList tasks={tasksToDoList} delete={removeTask} />
 
     </div>
   )
