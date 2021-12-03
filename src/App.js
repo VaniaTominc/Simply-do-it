@@ -14,7 +14,7 @@ const App = () => {
         ...prevTasksList,                 // Making sure the previous data inside of tasksToDoList does not get deleted
         {
           id: Math.random().toString(),   // Getting custom id, to distinguish items between when looping through the array.
-          tasks: item
+          task: item
         }
       ]
     })
