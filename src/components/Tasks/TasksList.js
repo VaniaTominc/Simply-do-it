@@ -1,4 +1,5 @@
 import React from 'react'
+import { ImBin2 } from 'react-icons/im'
 
 const TasksList = (props) => {
 
@@ -24,7 +25,7 @@ const TasksList = (props) => {
                   <div className='content task-content'>
                     {item.task}
                   </div>
-                  <button onClick={() => props.delete(id)}>Delete</button>
+                  <button onClick={() => props.delete(id) } className='delete-btn'><ImBin2 className="delete-icon" /></button>
                 </div>
               </div>
             )

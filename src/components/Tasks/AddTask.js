@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BsPlusCircleFill } from 'react-icons/bs'
 
 const AddTask = (props) => {
 
@@ -40,7 +41,9 @@ const AddTask = (props) => {
           />
           <button 
             type='submit'
-          >SUBMIT</button>
+          >
+            <BsPlusCircleFill size={24} />
+          </button>
         </form>
       </div>
     </div>
