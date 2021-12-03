@@ -4,7 +4,7 @@ import AddTask from './components/Tasks/AddTask'
 
 const App = () => {
 
-  const [tasksToDoList, setTasksToDoList] = useState()
+  const [tasksToDoList, setTasksToDoList] = useState([])
 
   // Add task function. We expect some information that needs to be passed inside.
   // Information is going to be uplifted from child to parent and then from parent to another child.
@@ -39,7 +39,7 @@ const App = () => {
 
       {/* TaskList component displayed */}
 
-      <TasksList />
+      <TasksList tasks={tasksToDoList} />
 
     </div>
   )
