@@ -2,7 +2,7 @@ import React from 'react'
 
 const Error = (props) => {
 
-  console.log('[ERROR] props >>>', props)
+  // console.log('[ERROR] props >>>', props)
 
   return (
     <div className='error-container'>

@@ -5,13 +5,31 @@ const TasksList = (props) => {
 
   // console.log('[TASKSLIST COMPONENT PROPS >>>>]', props)
 
+  // const date = new Date()
+  // console.log('date >>>>', date)
+
+  const date = () => {
+    const d = new Date()
+    const date = d.getDate()
+    const month = d.getMonth() + 1
+    const year = d.getFullYear()
+    
+    const dateStr = date + "/" + month + "/" + year
+    return dateStr
+  }
+
   return (
-    <div>
+    <div className='task-list-container'>
       {/* TASKSLISTS TO BE DISPLAYED */}
 
       {props.tasks.length > 0 ? 
       
         <>
+
+          <div className='date-container'>
+            <p>{date()}</p>
+          </div>
+
           {props.tasks && props.tasks.map(item => {
             const { id } = item
             // console.log('id >>>>', id)

@@ -41,6 +41,10 @@ h3 {
   margin-top: -0.3rem;
 }
 
+span {
+  color: red;
+}
+
 .task-card {
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -53,6 +57,12 @@ h3 {
 
 .task-label {
   display: none;
+}
+
+.input-content {
+  display: flex;
+  justify-content: space-between;
+  width: 91%;
 }
 
 .card-content {
@@ -68,6 +78,19 @@ h3 {
 .task-content {
   word-wrap: break-word;
   width: 80%;
+}
+
+.date-container {
+  padding-bottom: 0.2rem;
+}
+.date-container p {
+  font-size: 0.7rem;
+  color: red;
+  font-weight: bold;
+}
+
+.task-list-container {
+  margin-bottom: 2rem;
 }
 
 input[type=text] {
@@ -188,4 +211,36 @@ p.error-message {
   display: hidden;
   background: greenyellow;
   border-bottom: none;
+}
+
+@media only screen and (max-width: 540px) {
+  .task-card {
+    width: 89%;
+  }
+
+  .app {
+    margin-left: 3rem;
+  }
+
+  .modal-container {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .app {
+    max-width: 80%;
+    margin-left: 6rem;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .app {
+    max-width: 60%;
+    margin-left: 9rem;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .app {
+    max-width: 58%;
+    margin-left: 10rem;
+  }
 }/*# sourceMappingURL=main.css.map */

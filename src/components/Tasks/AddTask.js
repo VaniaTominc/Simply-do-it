@@ -53,7 +53,7 @@ const AddTask = (props) => {
 
       <div className='input-border'>
         <form onSubmit={addTaskHandler}>
-          <div className='card-content'>
+          <div className='input-content'>
             <label htmlFor='task' className='task-label'>Task</label>
             <input 
               id='id'
