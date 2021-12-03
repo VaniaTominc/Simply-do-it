@@ -7,11 +7,21 @@ const AddTask = (props) => {
   
   const [enteredTask, setEnteredTask] = useState('')
 
+  // ! Handling on submit task
   const addTaskHandler = event => {
     event.preventDefault()
     props.onAddTask(enteredTask)
     setEnteredTask('')
   }
+
+  // ! Handling input typing
+  const taskChangeHandler = event => {
+    // console.log('event.target.value >>>>', event.target.value)
+    setEnteredTask(event.target.value)
+    // console.log('enteredTask >>>>', enteredTask)
+  }
+
+  
 
   return (
     <div>
@@ -24,7 +34,7 @@ const AddTask = (props) => {
             id='id'
             type='text'
             value={enteredTask}
-            onChange
+            onChange={taskChangeHandler}
             maxLength='100'
             placeholder='Today I am working on ...'
           />
