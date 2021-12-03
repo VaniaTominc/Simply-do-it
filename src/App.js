@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TasksList from './components/Tasks/TasksList'
 import AddTask from './components/Tasks/AddTask'
+import { getLocalStorage } from './auth/localStorage'
 
 const App = () => {
 
-  const [tasksToDoList, setTasksToDoList] = useState([])
+  // Initially it was useState([]), but we want to show if there is something inside localStorage
+  const [tasksToDoList, setTasksToDoList] = useState(getLocalStorage())
 
   // ! Add task function. 
   // We expect some information that needs to be passed inside.
@@ -31,6 +33,11 @@ const App = () => {
   }
 
   // ! ---- Localstorage
+  // Update localStorage on each render of page.
+  useEffect(() => {
+    // Storing to localStorage
+    localStorage.setItem('list', JSON.stringify(tasksToDoList))
+  }, [tasksToDoList])
 
 
   // !

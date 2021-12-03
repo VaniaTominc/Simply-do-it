@@ -2,7 +2,7 @@ import React from 'react'
 
 const TasksList = (props) => {
 
-  console.log('[TASKSLIST COMPONENT PROPS >>>>]', props)
+  // console.log('[TASKSLIST COMPONENT PROPS >>>>]', props)
 
   return (
     <div>
